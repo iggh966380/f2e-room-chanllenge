@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./booking.css">
+    <link rel="stylesheet" href="./modal.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+</head>
+<body>
+    <div id="booking">
+      <aside class="aside">
+        <div class="button-area">
+          <div class="around">
+            <button class="booking-now">Booking Now</button>
+            <div id="button"></div>
+          </div>
+        </div>
+      </aside>
+      <section class="read">
+        <a href="./index.html">
+          <span class="others"> &#8592; 查看其他房型</span>
+        </a>
+        <div id="roomInfo">
+          <div id="roomShowcase" class="header"></div>
+          <div class="roomIn">
+            <div id="bookingInfo" class="mr-20">
+              <h2 class="mb-10">入住須知</h2>
+            </div>
+            <div id="description">
+              <h2 class="mb-10">房間資訊</h2>
+              <ul id="describes"></ul>
+            </div>
+          </div>
+          <h2 class="mb-10">提供的服務或設備</h2>
+          <div id="setting" class="mb-10"></div>
+          <div>
+            <h1 class="mb-10">空房查詢</h1>
+            <p class="mb-10">新增旅行日期，查看確切價格</p>
+            <div id="calendar" class="d-flex">
+              <div id="thisMonth">
+                <div id="thisHeader" class="d-flex align-item-center justify-content-center mb-10 flex-reverse">
+                  <h2 id="thisHeaderH2" class="text-center"></h2>
+                </div>
+              </div>
+              <div class="space"></div>
+              <div id="nextMonth">
+                <div id="nextHeader" class="d-flex align-item-center justify-content-center mb-10">
+                  <h2 id="nextHeaderH2" class="text-center"></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="clearReserve">重新預約</button>
+      </section>
+      <section id="myModal" class="modal d-none">
+        <div class="left p-20">
+          <div>
+            <div class="d-flex flex-column mb-10">
+              <label for="input-name" class="mb-10">姓名</label>
+              <input type="text" id="input-name" class="inputField">
+            </div>
+            <div class="d-flex flex-column mb-10">
+              <label for="input-phone" class="mb-10">手機號碼</label>
+              <input type="text" id="input-phone" class="inputField">
+            </div>
+            <div class="d-flex flex-column mb-10">
+              <label for="checkInDate" class="mb-10">入住日期</label>
+              <input type="text" id="checkInDate" class="inputField">
+            </div>
+            <div class="d-flex flex-column mb-10">
+              <label for="checkoutDate" class="mb-10">退房日期</label>
+              <input type="text" id="checkOutDate" class="inputField">
+            </div>
+            <p id="DaysReserved" class="mb-10">住多久</p>
+            <hr class="mb-10">
+          </div>
+          <div>
+            <div class="d-flex flex-column align-item-end">
+              <p class="mb-10">總計</p>
+              <p id="totalPrice"></p>
+            </div>
+            <button id="submitBtn">確認送出</button>
+            <p class="text-center">此系統僅具備預約功能，並不會進行收費</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="w-100 d-flex justify-end align-item-center">
+            <span class="close">&times;</span>
+          </div>
+          <div id="roomDemo">
+          </div>
+          <div id="bookKnow"></div>
+          <div id="process">
+            <h1 class="mb-10">預約流程</h1>
+            <hr class="mb-10">
+            <div class="d-flex justify-content-center align-item-center">
+              <div class="p-card">
+                <span class="material-icons md-48">post_add</span>
+                <div class="content">
+                  <p>送出線上預約單</p>
+                </div>
+              </div>
+              <p>=></p>
+              <div class="p-card">
+                <span class="material-icons md-48">how_to_reg</span>
+                <div class="content">
+                  <p>
+                    系統立即回覆是否預約成功，並以簡訊發送訂房通知。
+                  </p>  
+                  <p>(若未收到簡訊請來電確認)</p>
+                </div>
+              </div>
+              <p>=></p>
+              <div class="p-card">
+                <span class="material-icons md-48">paid</span>
+                <div class="content">
+                  <p>
+                    入住當日憑訂房通知，以現金或刷卡付款即可。
+                  </p>  
+                  <p>(僅接受 VISA. JCB. 銀聯卡)</p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="successModal" class="modal d-none">
+          <div class="inside">
+            <div class="w-50 d-flex justify-end align-start m-auto">
+              <span class="closeSuccessModal text-super">&times;</span>
+            </div>
+              <div class="d-flex justify-content-center">
+                <span class="material-icons text-super">
+                  fact_check
+                </span>
+              </div>
+              <h1 class="text-center mb-10">預約成功</h1>
+              <p>請留意簡訊發送訂房通知，入住當日務必出示此訂房通知，若未收到簡訊請來電確認，謝謝您。</p>
+        </div>
+        </section>
+      </div>
+      <script src="./booking.js"></script>
+      <script src="./calendar.js"></script>
+      <script src="./booking_event.js"></script>
+      <script src="./reserve.js"></script>
+      <script src="./modal.js"></script>
+</body>
+</html>

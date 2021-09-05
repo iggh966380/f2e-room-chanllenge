@@ -1,0 +1,79 @@
+.modal {
+  color: #fff;
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  top: 80%;
+  left: 2%;
+  display: flex;
+  padding: 0;
+  z-index: 1;
+}
+
+.left {
+  flex: 2;
+  height: 93.38%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #38470B;
+}
+
+.right {
+  border: 1px solid #38470B;
+  flex: 4;
+  height: 93%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #FFFFFF;
+  color: #38470B;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.inputField {
+  height: 5vh;
+  font-size: 1.3rem;
+}
+
+.p-card {
+  display: flex;
+  border: 1px solid #38470B;
+  border-radius: 5px;
+  width: 300px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+#successModal {
+  background-color: #38470B;
+}
+
+.inside {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.closeSuccessModal {
+  cursor: pointer;
+}

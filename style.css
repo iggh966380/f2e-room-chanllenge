@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#bg {
+  width: 100%;
+  height: 100vh;
+  background: url('./img/house/bg0.jpeg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#bg::before {
+  content: '';
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+}
+
+/* x-275px y-275px*/
+a {
+  width: 100%;
+  height: 275px;
+}
+
+#photo {
+  width: 825px;
+  height: 550px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0;
+}
+
+.showcase-img {
+  width: 275px;
+  height: 275px;
+}
+
+.sidebar {
+  line-height: 2rem;
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+}
+
+#button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50px;
+}
+
+.showcase-btn {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.showcase-btn:hover {
+  cursor: pointer;
+}
+
+.bg-none {
+  background: none;
+}
+
+.bg-full {
+  background: #fff;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-center {
+  background: no-repeat center center/cover;
+}
+
+.d-none {
+  display: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+span {
+  z-index: 1;
+}
+
+/* overlay */
+.overlay {
+  position: relative;
+}
+
+.overlay::before {
+  content: '';
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.overlay:hover::before {
+  background: rgba(56, 71, 11, 0.5);
+  animation: hoverOverlay 2s;
+}
+
+@keyframes hoverOverlay {
+    from {
+      height: 0px;
+      transform: translateY(275px);
+    }
+    
+    to {
+      height: 275px;
+      transform: translateY(0px);
+      background: rgba(56, 71, 11, 0.5);
+    }
+  }
