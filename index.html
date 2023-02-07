@@ -1,36 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Meta Tags — Preview, Edit and Generate" />
+    <meta
+      name="description"
+      content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://iggh966380.github.io/f2e-room-book/"
+    />
+    <meta property="og:title" content="奈斯旅館。NICE" />
+    <meta
+      property="og:description"
+      content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!"
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/iggh966380/f2e-room-book/blob/main/Nice%20Hotel.png"
+    />
+
     <title>Nice Hotel</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <div id="app">
-    <section id="bg" class="fade-out"></section>
-    <main id="main">
-      <section>
-        <div class="sidebar">
-          <div>
-            <p><strong>奈斯旅館。NICE HOTEL</strong></p>
-            <br>
-            <p>新北市泰山區虛擬一路1號</p>
-            <p>02-33456789</p>
-            <p>HOUSE@HOTEL.COM</p>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <section id="bg" class="fade-out"></section>
+      <main id="main">
+        <section>
+          <div class="sidebar">
+            <div>
+              <p><strong>奈斯旅館。NICE HOTEL</strong></p>
+              <br />
+              <p>新北市泰山區虛擬一路1號</p>
+              <p>02-33456789</p>
+              <p>HOUSE@HOTEL.COM</p>
+            </div>
           </div>
-        </div>
-        <div id="photo"></div>
-      </section>
+          <div id="photo"></div>
+        </section>
 
-      <footer>
-        <div id="button"></div>
-      </footer>
-    </main>
-
-  </div>
-  <script src="./mounted.js"></script>
-  <script src="./event.js"></script>
-</body>
+        <footer>
+          <div id="button"></div>
+        </footer>
+      </main>
+    </div>
+    <script>
+      var exports = { __esModule: true };
+    </script>
+    <script type="module" src="./dist/assets/js/init.js"></script>
+  </body>
 </html>
