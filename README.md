@@ -1,4 +1,4 @@
-# f2e-room-book
+# f2e-room-challenge
 
 F2E 精神時光屋 - 第六關
 
@@ -9,4 +9,4 @@ F2E 精神時光屋 - 第六關
 使用方法:
 
 1.  需要先去 f2e 精神時光屋的訂房系統頁面取得房間資訊 token，並自行產生 enviroment 檔案
-2.  檔案下載後 npm run build 後，可以直接用 live server 開啟 index.html
+2.  檔案下載後，執行 npm run build，接著可以用 live server 開啟 index.html
