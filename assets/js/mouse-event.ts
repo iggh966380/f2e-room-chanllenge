@@ -5,8 +5,8 @@ interface VoidFunction {
 }
 
 class EventListener {
-  item: HTMLAnchorElement;
-  constructor(item: HTMLAnchorElement) {
+  item: Element;
+  constructor(item: Element) {
     this.item = item;
   }
 
@@ -65,19 +65,27 @@ export class MouseLeaveEvent extends EventListener {
 }
 
 export class MouseClickEvent extends EventListener {
-  item: HTMLAnchorElement;
+  element: Element;
   actionType: "click";
   room: Room;
-  constructor(item: HTMLAnchorElement, room: Room, actionType: "click") {
+  constructor(item: Element) {
     super(item);
-    this.actionType = actionType;
-    this.room = room;
   }
 
-  public mouseEvent() {
+  public mouseEvent(room: Room) {
     this.eventListener(this.actionType, () => {
-      localStorage.id = this.room.id;
+      localStorage.id = room.id;
     });
+  }
+
+  public switchBackground(buttons: any) {
+    this.eventListener(this.actionType, () => {
+      for (let button of buttons) {
+        button.classList.remove('bg-full');
+      }
+      this.element.classList.add("bg-full");
+      return `url(./img/house/bg${this.element.id}.jpeg)`;
+    })
   }
 }
 

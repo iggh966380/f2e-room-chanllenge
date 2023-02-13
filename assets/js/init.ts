@@ -6,7 +6,7 @@ import {
 } from "./mouse-event.js";
 import { fetchRooms } from "../service/rooms.service.js";
 import { AddClass } from "./class.js";
-import { addSliderButton } from "./button.js";
+import { addButton, setButtonAction } from "./button.js";
 
 async function init() {
   const imgArea = document.querySelector("#photo");
@@ -32,15 +32,17 @@ async function init() {
     const mouseEvent = [
       new MouseEnterEvent(link, text, "mouseenter"),
       new MouseLeaveEvent(link, text, "mouseleave"),
-      new MouseClickEvent(link, item, "click"),
     ];
 
     for (let i = 0; i < mouseEvent.length; i++) {
       mouseEvent[i].mouseEvent();
     }
+
+    new MouseClickEvent(link).mouseEvent(item);
   });
 
-  addSliderButton();
+  addButton();
+  setButtonAction();
 }
 
 init();
