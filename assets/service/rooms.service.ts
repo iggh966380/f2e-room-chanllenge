@@ -1,5 +1,5 @@
 import { F2EApiResponse } from "../interface/room";
-import { enviroment } from "../../enviroment/enviroment";
+import { enviroment } from "../../enviroment/enviroment.js";
 
 export async function fetchRooms(
   url = "https://challenge.thef2e.com/api/thef2e2019/stage6/rooms"
